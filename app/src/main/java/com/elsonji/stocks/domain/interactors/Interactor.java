@@ -1,4 +1,4 @@
-package com.elsonji.stocks.domain;
+package com.elsonji.stocks.domain.interactors;
 
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
