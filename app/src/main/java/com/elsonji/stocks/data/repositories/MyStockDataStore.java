@@ -1,9 +1,12 @@
 package com.elsonji.stocks.data.repositories;
 
 import com.elsonji.stocks.data.models.MyRetroStock;
+import com.elsonji.stocks.data.models.MyRetroStockList;
+
+import java.util.ArrayList;
 
 import io.reactivex.Observable;
 
 public interface MyStockDataStore {
-    Observable<MyRetroStock> getMyRetroStock(String stockSymbol);
+    Observable<MyRetroStockList> getMyRetroStocks(ArrayList<String> stockSymbolList);
 }

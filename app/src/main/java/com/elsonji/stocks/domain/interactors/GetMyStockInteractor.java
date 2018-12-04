@@ -1,20 +1,22 @@
 package com.elsonji.stocks.domain.interactors;
 
-import com.elsonji.stocks.domain.models.MyStock;
 import com.elsonji.stocks.domain.models.MyStockList;
 import com.elsonji.stocks.domain.repositories.MyStockRepository;
 
+import java.util.ArrayList;
+
 import io.reactivex.Observable;
 
-public class GetMyStockInteractor extends Interactor<MyStock, String>{
+public class GetMyStockInteractor extends Interactor<MyStockList, ArrayList<String>> {
 
     private MyStockRepository myStockRepository;
 
     public GetMyStockInteractor(MyStockRepository myStockRepository) {
         this.myStockRepository = myStockRepository;
     }
+
     @Override
-    Observable<MyStock> buildInteractorObservable(String stockSymbol) {
-        return myStockRepository.getMyStock(stockSymbol);
+    public Observable<MyStockList> buildInteractorObservable(ArrayList<String> stockSymbolList) {
+        return myStockRepository.getMyStocks(stockSymbolList);
     }
 }

@@ -2,8 +2,12 @@ package com.elsonji.stocks.data.repositories;
 
 import com.elsonji.stocks.data.mappers.MyRetroStockMapper;
 import com.elsonji.stocks.data.models.MyRetroStock;
+import com.elsonji.stocks.data.models.MyRetroStockList;
 import com.elsonji.stocks.domain.models.MyStock;
+import com.elsonji.stocks.domain.models.MyStockList;
 import com.elsonji.stocks.domain.repositories.MyStockRepository;
+
+import java.util.ArrayList;
 
 import io.reactivex.Observable;
 import io.reactivex.functions.Function;
@@ -16,12 +20,13 @@ public class MyStockRepositoryImpl implements MyStockRepository {
         myStockApiDataStore = dataStore;
         this.mapper = mapper;
     }
+
     @Override
-    public Observable<MyStock> getMyStock(String stockSymbol) {
-        return myStockApiDataStore.getMyRetroStock(stockSymbol).map(new Function<MyRetroStock, MyStock>() {
+    public Observable<MyStockList> getMyStocks(ArrayList<String> stockSymbolList) {
+        return myStockApiDataStore.getMyRetroStocks(stockSymbolList).map(new Function<MyRetroStockList, MyStockList>() {
             @Override
-            public MyStock apply(MyRetroStock myRetroStock) throws Exception {
-                return mapper.mapFrom(myRetroStock);
+            public MyStockList apply(MyRetroStockList myRetroStockList) throws Exception {
+                return null;
             }
         });
     }
