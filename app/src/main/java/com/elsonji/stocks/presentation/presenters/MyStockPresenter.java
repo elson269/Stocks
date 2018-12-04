@@ -6,8 +6,6 @@ import com.elsonji.stocks.presentation.mappers.MyStockModelMapper;
 import com.elsonji.stocks.presentation.models.MyStockModelList;
 import com.elsonji.stocks.presentation.views.MyStockListView;
 
-import java.util.ArrayList;
-
 import io.reactivex.observers.DisposableObserver;
 
 public class MyStockPresenter implements Presenter {

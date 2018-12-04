@@ -26,7 +26,7 @@ public class MyStockRepositoryImpl implements MyStockRepository {
         return myStockApiDataStore.getMyRetroStocks(stockSymbolList).map(new Function<MyRetroStockList, MyStockList>() {
             @Override
             public MyStockList apply(MyRetroStockList myRetroStockList) throws Exception {
-                return null;
+                return mapper.convertToMyStockList(myRetroStockList);
             }
         });
     }
