@@ -12,13 +12,17 @@ import com.elsonji.stocks.data.repositories.MyStockApiDataStore;
 import com.elsonji.stocks.data.repositories.MyStockRepositoryImpl;
 import com.elsonji.stocks.domain.interactors.GetMyStockInteractor;
 import com.elsonji.stocks.domain.models.MyStock;
+import com.elsonji.stocks.domain.models.MyStockList;
 import com.elsonji.stocks.presentation.mappers.MyStockModelMapper;
 import com.elsonji.stocks.presentation.models.MyStockModel;
+import com.elsonji.stocks.presentation.models.MyStockModelList;
 import com.elsonji.stocks.presentation.presenters.MyStockPresenter;
 import com.elsonji.stocks.presentation.views.MyStockListView;
 import com.elsonji.stocks.presentation.views.adapters.MyStockAdapter;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.function.ToDoubleBiFunction;
 
 import butterknife.BindView;
@@ -38,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements MyStockListView {
     GetMyStockInteractor mGetMyStockInteractor;
     MyStockPresenter mPresenter;
     MyStockApiDataStore mDataStore;
+    ArrayList<String> mStockSymbolList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,32 +50,45 @@ public class MainActivity extends AppCompatActivity implements MyStockListView {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        mMyRetroStockMapper = new MyRetroStockMapper();
+        mMyStockModelMapper = new MyStockModelMapper();
+        mDataStore = new MyStockApiDataStore();
+        mMyStockRepositoryImpl = new MyStockRepositoryImpl(mDataStore, mMyRetroStockMapper);
+
         mAdapter = new MyStockAdapter(this);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        mGetMyStockInteractor = new GetMyStockInteractor(mMyStockRepositoryImpl);
+        mPresenter = new MyStockPresenter(mGetMyStockInteractor, mMyStockModelMapper);
         mPresenter.setMyStockListView(this);
         mPresenter.getMyStockList();
 
-        loadMyStockList();
+        String[] stockList = {"ohgi", "aapl"};
+
+        mStockSymbolList = new ArrayList<>(Arrays.asList(stockList));
+
+        loadMyStockList(mStockSymbolList);
     }
 
-    private void loadMyStockList() {
-        //setItems(mGetMyStockInteractor.buildInteractorObservable("ohgi"));
+    private void loadMyStockList(ArrayList<String> stockSymbolList) {
+
+        setItems(mGetMyStockInteractor.buildInteractorObservable(stockSymbolList));
     }
 
-    private void setItems(Observable<ArrayList<MyStock>> itemObservable) {
+    private void setItems(Observable<MyStockList> itemObservable) {
         itemObservable.subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<ArrayList<MyStock>>() {
+                .subscribe(new Consumer<MyStockList>() {
                     @Override
-                    public void accept(ArrayList<MyStock> myStocks) throws Exception {
+                    public void accept(MyStockList myStocks) throws Exception {
                         mAdapter.setItems(myStocks);
                     }
                 });
     }
 
     @Override
-    public void renderMyStockListView(ArrayList<MyStockModel> myStockModelList) {
+    public void renderMyStockListView(MyStockModelList myStockModelList) {
 
     }
 
@@ -93,4 +111,6 @@ public class MainActivity extends AppCompatActivity implements MyStockListView {
     public Context getContext() {
         return null;
     }
+
+
 }

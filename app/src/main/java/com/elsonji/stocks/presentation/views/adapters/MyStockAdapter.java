@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.elsonji.stocks.R;
 import com.elsonji.stocks.domain.models.MyStock;
+import com.elsonji.stocks.domain.models.MyStockList;
 
 import java.util.ArrayList;
 
@@ -69,9 +70,9 @@ public class MyStockAdapter extends RecyclerView.Adapter<MyStockAdapter.MyStockV
         }
     }
 
-    public void setItems(ArrayList<MyStock> myStockList) {
-        myStockList.clear();
-        mMyStockList.addAll(myStockList);
+    public void setItems(MyStockList myStockList) {
+        mMyStockList.clear();
+        mMyStockList.addAll(myStockList.getStocks());
         notifyDataSetChanged();
     }
 }

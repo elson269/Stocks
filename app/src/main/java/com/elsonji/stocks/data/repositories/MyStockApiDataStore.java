@@ -10,6 +10,18 @@ import io.reactivex.Observable;
 public class MyStockApiDataStore implements MyStockDataStore {
     @Override
     public Observable<MyRetroStockList> getMyRetroStocks(ArrayList<String> stockSymbolList) {
-        return ServiceGenerator.getDataService().getMyStocks(stockSymbolList);
+
+        return ServiceGenerator.getDataService().getMyStocks(convertToString(stockSymbolList));
+    }
+
+    private String convertToString(ArrayList<String> stockSymbolList) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < stockSymbolList.size(); i++) {
+            stringBuilder.append(stockSymbolList.get(i));
+            if (i != stockSymbolList.size()) {
+                stringBuilder.append(",");
+            }
+        }
+        return stringBuilder.toString();
     }
 }

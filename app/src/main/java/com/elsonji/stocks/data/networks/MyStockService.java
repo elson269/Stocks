@@ -10,5 +10,5 @@ import retrofit2.http.Path;
 
 public interface MyStockService {
     @GET("stock/{symbol}/batch?types=quote")
-    Observable<MyRetroStockList> getMyStocks(@Path("symbol") ArrayList<String> stockSymbolList );
+    Observable<MyRetroStockList> getMyStocks(@Path("symbol") String stockList);
 }
