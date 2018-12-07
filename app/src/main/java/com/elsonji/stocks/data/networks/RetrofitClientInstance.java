@@ -1,10 +1,12 @@
 package com.elsonji.stocks.data.networks;
 
+import android.util.Log;
+
+import com.elsonji.stocks.data.models.MyRetroStockList;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
-import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -13,9 +15,9 @@ public class RetrofitClientInstance {
     private static final String BASE_URL = "https://api.iextrading.com/1.0/";
 
     public static Retrofit getRetrofitInstance() {
-        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        Log.i("aaaaaaa", "llllllll");
         Gson gson = new GsonBuilder()
-                .registerTypeAdapter(StockResponse.class, new StockDeserializer())
+                .registerTypeAdapter(MyRetroStockList.class, new StockDeserializer())
                 .create();
 
         if (retrofit == null) {
@@ -25,7 +27,6 @@ public class RetrofitClientInstance {
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     //This verifies we are using RxJava2 for this API call.
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                    //.client(httpClient.build())
                     .build();
         }
         return retrofit;

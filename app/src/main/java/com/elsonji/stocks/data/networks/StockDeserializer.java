@@ -1,42 +1,57 @@
 package com.elsonji.stocks.data.networks;
 
+import android.util.Log;
+
 import com.elsonji.stocks.data.models.MyRetroStock;
 import com.elsonji.stocks.data.models.MyRetroStockList;
 import com.google.gson.Gson;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.Set;
 
-public class StockDeserializer implements JsonDeserializer {
+public class StockDeserializer implements JsonDeserializer<MyRetroStockList> {
+
     @Override
-    public StockResponse deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
+    public MyRetroStockList deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
             throws JsonParseException {
-        StockResponse stockResponse = new StockResponse();
-        ArrayList<JsonObject> quoteElements = new ArrayList<>();
-        ArrayList<MyRetroStock> myRetroStocks = new ArrayList<>();
+
+        Log.i("aaaaadfdfd", "ggggggg");
         Gson gson = new Gson();
+        JsonElement value = json.getAsJsonObject();
+        //StockResponse stockResponse = new StockResponse();
+        MyRetroStockList myRetroStockList = new MyRetroStockList();
+        if (value != null) {
+            Iterable<Map.Entry<String, JsonElement>> entries = value.getAsJsonObject().entrySet();
+            ArrayList<MyRetroStock> myRetroStocks = new ArrayList<>();
+            for (Map.Entry<String, JsonElement> entry : entries) {
+                myRetroStocks.add(gson.fromJson(entry.getValue(), MyRetroStock.class));
+            }
+            myRetroStockList.setMyRetroStockList(myRetroStocks);
 
-        JsonObject jsonObject = json.getAsJsonObject();
-        Set<Map.Entry<String, JsonElement>> symbolSet = jsonObject.entrySet();
-
-        for (Map.Entry<String, JsonElement> entryItem : symbolSet) {
-            quoteElements.add(entryItem.getValue().getAsJsonObject());
         }
+//        ArrayList<JsonObject> quoteElements = new ArrayList<>();
+//
+//
+//        JsonObject jsonObject = json.getAsJsonObject();
+//        Set<Map.Entry<String, JsonElement>> symbolSet = jsonObject.entrySet();
+//
+//        for (Map.Entry<String, JsonElement> entryItem : symbolSet) {
+//            quoteElements.add(entryItem.getValue().getAsJsonObject());
+//        }
+//
+//        for (JsonObject jsonObject1 : quoteElements) {
+//            myRetroStocks.add(gson.fromJson(jsonObject1.getAsJsonObject("quote").toString(), MyRetroStock.class));
+//        }
+//
+//        stockResponse.setMyRetroStocks(myRetroStocks);
 
-        for (JsonObject jsonObject1 : quoteElements) {
-            myRetroStocks.add(gson.fromJson(jsonObject1.get("quote").getAsJsonObject().toString(),
-                    MyRetroStock.class));
-        }
-        stockResponse.myRetroStocks = myRetroStocks;
 
-        return stockResponse;
+        return myRetroStockList;
     }
 }
 

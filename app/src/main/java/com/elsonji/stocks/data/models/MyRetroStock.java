@@ -14,15 +14,15 @@ public class MyRetroStock {
 
     @SerializedName("latestPrice")
     @Expose
-    private Double latestPrice;
+    private String latestPrice;
 
     @SerializedName("change")
     @Expose
-    private Double change;
+    private String change;
 
     @SerializedName("changePercent")
     @Expose
-    private Double changePercent;
+    private String changePercent;
 
     public String getSymbol() {
         return symbol;
@@ -40,27 +40,27 @@ public class MyRetroStock {
         this.companyName = companyName;
     }
 
-    public Double getLatestPrice() {
+    public String getLatestPrice() {
         return latestPrice;
     }
 
-    public void setLatestPrice(Double latestPrice) {
+    public void setLatestPrice(String latestPrice) {
         this.latestPrice = latestPrice;
     }
 
-    public Double getChange() {
+    public String getChange() {
         return change;
     }
 
-    public void setChange(Double change) {
+    public void setChange(String change) {
         this.change = change;
     }
 
-    public Double getChangePercent() {
+    public String getChangePercent() {
         return changePercent;
     }
 
-    public void setChangePercent(Double changePercent) {
+    public void setChangePercent(String changePercent) {
         this.changePercent = changePercent;
     }
 

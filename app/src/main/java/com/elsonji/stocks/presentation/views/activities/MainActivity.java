@@ -5,9 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.elsonji.stocks.R;
 import com.elsonji.stocks.data.mappers.MyRetroStockMapper;
+import com.elsonji.stocks.data.networks.StockDeserializer;
 import com.elsonji.stocks.data.repositories.MyStockApiDataStore;
 import com.elsonji.stocks.data.repositories.MyStockRepositoryImpl;
 import com.elsonji.stocks.domain.interactors.GetMyStockInteractor;
@@ -65,10 +67,10 @@ public class MainActivity extends AppCompatActivity implements MyStockListView {
         mPresenter.getMyStockList();
 
         String[] stockList = {"ohgi", "aapl"};
-
         mStockSymbolList = new ArrayList<>(Arrays.asList(stockList));
 
         loadMyStockList(mStockSymbolList);
+
     }
 
     private void loadMyStockList(ArrayList<String> stockSymbolList) {
@@ -77,11 +79,14 @@ public class MainActivity extends AppCompatActivity implements MyStockListView {
     }
 
     private void setItems(Observable<MyStockList> itemObservable) {
+
+
         itemObservable.subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<MyStockList>() {
                     @Override
                     public void accept(MyStockList myStocks) throws Exception {
+                        Log.i("aaaabbbb", "dddfdfdfd");
                         mAdapter.setItems(myStocks);
                     }
                 });
@@ -109,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements MyStockListView {
 
     @Override
     public Context getContext() {
-        return null;
+        return this;
     }
 
 

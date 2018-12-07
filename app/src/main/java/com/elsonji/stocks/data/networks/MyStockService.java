@@ -2,13 +2,11 @@ package com.elsonji.stocks.data.networks;
 
 import com.elsonji.stocks.data.models.MyRetroStockList;
 
-import java.util.ArrayList;
-
 import io.reactivex.Observable;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
+import retrofit2.http.Url;
 
 public interface MyStockService {
-    @GET("stock/{symbol}/batch?types=quote")
-    Observable<MyRetroStockList> getMyStocks(@Path("symbol") String stockList);
+    @GET
+    Observable<MyRetroStockList> getMyStocks(@Url String url);
 }

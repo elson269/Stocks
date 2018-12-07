@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +22,7 @@ import butterknife.ButterKnife;
 public class MyStockAdapter extends RecyclerView.Adapter<MyStockAdapter.MyStockViewHolder> {
     private Context mContext;
 
-    ArrayList<MyStock> mMyStockList;
+    private ArrayList<MyStock> mMyStockList = new ArrayList<>();
 
     public MyStockAdapter(Context context) {
         mContext = context;
@@ -30,7 +31,7 @@ public class MyStockAdapter extends RecyclerView.Adapter<MyStockAdapter.MyStockV
     @NonNull
     @Override
     public MyStockViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        ConstraintLayout itemView = (ConstraintLayout)LayoutInflater.from(mContext)
+        ConstraintLayout itemView = (ConstraintLayout) LayoutInflater.from(mContext)
                 .inflate(R.layout.my_stock_item, viewGroup, false);
         return new MyStockViewHolder(itemView);
     }
@@ -47,6 +48,7 @@ public class MyStockAdapter extends RecyclerView.Adapter<MyStockAdapter.MyStockV
     @Override
     public int getItemCount() {
         if (mMyStockList != null) {
+            Log.i("aaaaaaa", String.valueOf(mMyStockList.size()));
             return mMyStockList.size();
         } else {
             return 0;
@@ -64,6 +66,7 @@ public class MyStockAdapter extends RecyclerView.Adapter<MyStockAdapter.MyStockV
         TextView changeTV;
         @BindView(R.id.change_percent_tv)
         TextView changePercentTV;
+
         public MyStockViewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
@@ -71,8 +74,11 @@ public class MyStockAdapter extends RecyclerView.Adapter<MyStockAdapter.MyStockV
     }
 
     public void setItems(MyStockList myStockList) {
+        ArrayList<MyStock> myStocks = myStockList.getStocks();
         mMyStockList.clear();
-        mMyStockList.addAll(myStockList.getStocks());
-        notifyDataSetChanged();
+        if (myStocks != null) {
+            mMyStockList.addAll(myStockList.getStocks());
+            notifyDataSetChanged();
+        }
     }
 }

@@ -10,7 +10,7 @@ import java.util.List;
 
 public class MyRetroStockMapper {
 
-     private MyStock mapFrom(MyRetroStock myRetroStock) {
+    private MyStock mapFrom(MyRetroStock myRetroStock) {
         MyStock myStock = null;
         if (myRetroStock != null) {
             myStock = new MyStock(myRetroStock.getSymbol(), myRetroStock.getCompanyName(),
@@ -23,13 +23,18 @@ public class MyRetroStockMapper {
         MyStockList myStockList = new MyStockList();
         ArrayList<MyStock> myStocks = new ArrayList<>();
         MyStock myStock;
-        for (MyRetroStock myRetroStock : myRetroStockList.getMyRetroStockList()) {
-            if (myRetroStock != null) {
-                myStock = mapFrom(myRetroStock);
-                myStocks.add(myStock);
-                myStockList.setStocks(myStocks);
+        ArrayList<MyRetroStock> myRetroStocks = myRetroStockList.getMyRetroStockList();
+        if (myRetroStocks != null) {
+            for (MyRetroStock myRetroStock : myRetroStocks) {
+                if (myRetroStock != null) {
+                    myStock = mapFrom(myRetroStock);
+                    myStocks.add(myStock);
+                    myStockList.setStocks(myStocks);
+                }
             }
+            return myStockList;
+        } else {
+            return new MyStockList();
         }
-        return myStockList;
     }
 }

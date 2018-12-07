@@ -3,11 +3,11 @@ package com.elsonji.stocks.domain.models;
 public class MyStock {
     private String symbol;
     private String companyName;
-    private double latestPrice;
-    private double change;
-    private double changePercent;
+    private String latestPrice;
+    private String change;
+    private String changePercent;
 
-    public MyStock(String symbol, String companyName, double latestPrice, double change, double changePercent) {
+    public MyStock(String symbol, String companyName, String latestPrice, String change, String changePercent) {
         this.symbol = symbol;
         this.companyName = companyName;
         this.latestPrice = latestPrice;
@@ -31,28 +31,28 @@ public class MyStock {
         return companyName;
     }
 
-    public void setLatestPrice(double latestPrice) {
+    public void setLatestPrice(String latestPrice) {
         this.latestPrice = latestPrice;
     }
 
-    public double getLatestPrice() {
+    public String getLatestPrice() {
         return latestPrice;
     }
 
 
-    public void setChange(double change) {
+    public void setChange(String change) {
         this.change = change;
     }
 
-    public double getChange() {
+    public String getChange() {
         return change;
     }
 
-    public void setChangePercent(double changePercent) {
+    public void setChangePercent(String changePercent) {
         this.changePercent = changePercent;
     }
 
-    public double getChangePercent() {
+    public String getChangePercent() {
         return changePercent;
     }
 

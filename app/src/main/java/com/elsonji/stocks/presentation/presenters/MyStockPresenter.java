@@ -15,7 +15,7 @@ public class MyStockPresenter implements Presenter {
 
     public MyStockPresenter(GetMyStockInteractor getMyStockInteractor, MyStockModelMapper mapper) {
         this.getMyStockInteractor = getMyStockInteractor;
-        this. mapper = mapper;
+        this.mapper = mapper;
     }
 
     public void setMyStockListView(MyStockListView listView) {
