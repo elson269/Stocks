@@ -13,18 +13,24 @@ import android.widget.TextView;
 import com.elsonji.stocks.R;
 import com.elsonji.stocks.domain.models.MyStock;
 import com.elsonji.stocks.domain.models.MyStockList;
+import com.elsonji.stocks.presentation.di.StockApplication;
 
 import java.util.ArrayList;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MyStockAdapter extends RecyclerView.Adapter<MyStockAdapter.MyStockViewHolder> {
     private Context mContext;
-    private ArrayList<MyStock> mMyStockList = new ArrayList<>();
+
+    @Inject
+    ArrayList<MyStock> mMyStockList;
 
     public MyStockAdapter(Context context) {
         mContext = context;
+        StockApplication.getActivityComponent().inject(this);
     }
 
     @NonNull
@@ -37,8 +43,6 @@ public class MyStockAdapter extends RecyclerView.Adapter<MyStockAdapter.MyStockV
 
     @Override
     public void onBindViewHolder(@NonNull MyStockViewHolder holder, int position) {
-        //Log.i("aaaaaaaSymbol", mMyStockList.get(position).getSymbol());
-
         holder.stockSymbolTV.setText(mMyStockList.get(position).getSymbol());
         holder.companyNameTV.setText(mMyStockList.get(position).getCompanyName());
         holder.latestPriceTV.setText(String.valueOf(mMyStockList.get(position).getLatestPrice()));

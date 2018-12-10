@@ -15,6 +15,7 @@ import com.elsonji.stocks.data.repositories.MyStockRepositoryImpl;
 import com.elsonji.stocks.domain.interactors.GetMyStockInteractor;
 import com.elsonji.stocks.domain.models.MyStock;
 import com.elsonji.stocks.domain.models.MyStockList;
+import com.elsonji.stocks.presentation.di.StockApplication;
 import com.elsonji.stocks.presentation.mappers.MyStockModelMapper;
 import com.elsonji.stocks.presentation.models.MyStockModel;
 import com.elsonji.stocks.presentation.models.MyStockModelList;
@@ -27,6 +28,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.function.ToDoubleBiFunction;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.reactivex.Observable;
@@ -36,14 +39,23 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity implements MyStockListView {
     @BindView(R.id.my_stock_list_recycler_view)
+
     RecyclerView mRecyclerView;
+    @Inject
     MyStockAdapter mAdapter;
+    @Inject
     MyStockModelMapper mMyStockModelMapper;
+    @Inject
     MyRetroStockMapper mMyRetroStockMapper;
+    @Inject
     MyStockRepositoryImpl mMyStockRepositoryImpl;
+    @Inject
     GetMyStockInteractor mGetMyStockInteractor;
+    @Inject
     MyStockPresenter mPresenter;
+    @Inject
     MyStockApiDataStore mDataStore;
+
     ArrayList<String> mStockSymbolList;
 
     @Override
@@ -51,26 +63,18 @@ public class MainActivity extends AppCompatActivity implements MyStockListView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        StockApplication.getActivityComponent().inject(this);
 
-        mMyRetroStockMapper = new MyRetroStockMapper();
-        mMyStockModelMapper = new MyStockModelMapper();
-        mDataStore = new MyStockApiDataStore();
-        mMyStockRepositoryImpl = new MyStockRepositoryImpl(mDataStore, mMyRetroStockMapper);
-
-        mAdapter = new MyStockAdapter(this);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         String[] stockList = {"OHGI", "AAPL"};
         mStockSymbolList = new ArrayList<>(Arrays.asList(stockList));
 
-        mGetMyStockInteractor = new GetMyStockInteractor(mMyStockRepositoryImpl);
-        mPresenter = new MyStockPresenter(mGetMyStockInteractor, mMyStockModelMapper);
         mPresenter.setMyStockListView(this);
         mPresenter.getMyStockList();
 
         loadMyStockList(mStockSymbolList);
-
     }
 
     private void loadMyStockList(ArrayList<String> stockSymbolList) {

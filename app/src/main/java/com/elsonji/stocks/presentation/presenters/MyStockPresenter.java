@@ -16,13 +16,11 @@ public class MyStockPresenter implements Presenter {
     private GetMyStockInteractor getMyStockInteractor;
     private MyStockModelMapper mapper;
     private MyStockListView myStockListView;
-    //private ArrayList<String> myRetroStockList;
 
     public MyStockPresenter(GetMyStockInteractor getMyStockInteractor, MyStockModelMapper mapper
     ) {
         this.getMyStockInteractor = getMyStockInteractor;
         this.mapper = mapper;
-        //this.myRetroStockList = myRetroStockList;
     }
 
     public void setMyStockListView(MyStockListView listView) {

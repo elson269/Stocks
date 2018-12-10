@@ -25,15 +25,13 @@ public class StockDeserializer implements JsonDeserializer<MyRetroStockList> {
         JsonObject value = json.getAsJsonObject();
         MyRetroStockList myRetroStockList = new MyRetroStockList();
         if (value != null) {
-
-
             Iterable<Map.Entry<String, JsonElement>> entries = value.entrySet();
             ArrayList<MyRetroStock> myRetroStocks = new ArrayList<>();
             for (Map.Entry<String, JsonElement> entry : entries) {
-                myRetroStocks.add(gson.fromJson(entry.getValue().getAsJsonObject().get("quote").getAsJsonObject().toString(), MyRetroStock.class));
+                myRetroStocks.add(gson.fromJson(entry.getValue().getAsJsonObject().get("quote").
+                        getAsJsonObject().toString(), MyRetroStock.class));
             }
             myRetroStockList.setMyRetroStockList(myRetroStocks);
-
         }
         return myRetroStockList;
     }
