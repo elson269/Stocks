@@ -3,6 +3,7 @@ package com.elsonji.stocks.data.models;
 import java.util.ArrayList;
 
 public class MyRetroStockList {
+
     private ArrayList<MyRetroStock> myRetroStockList;
 
     public ArrayList<MyRetroStock> getMyRetroStockList() {

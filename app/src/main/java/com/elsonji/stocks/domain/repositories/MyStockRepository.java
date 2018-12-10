@@ -1,6 +1,5 @@
 package com.elsonji.stocks.domain.repositories;
 
-import com.elsonji.stocks.domain.models.MyStock;
 import com.elsonji.stocks.domain.models.MyStockList;
 
 import java.util.ArrayList;

@@ -23,9 +23,7 @@ public class MyRetroStockMapper {
         MyStockList myStockList = new MyStockList();
         ArrayList<MyStock> myStocks = new ArrayList<>();
         MyStock myStock;
-        ArrayList<MyRetroStock> myRetroStocks = myRetroStockList.getMyRetroStockList();
-        if (myRetroStocks != null) {
-            for (MyRetroStock myRetroStock : myRetroStocks) {
+          for (MyRetroStock myRetroStock : myRetroStockList.getMyRetroStockList()) {
                 if (myRetroStock != null) {
                     myStock = mapFrom(myRetroStock);
                     myStocks.add(myStock);
@@ -33,8 +31,5 @@ public class MyRetroStockMapper {
                 }
             }
             return myStockList;
-        } else {
-            return new MyStockList();
-        }
     }
 }

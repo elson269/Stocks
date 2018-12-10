@@ -20,7 +20,7 @@ public class MyStockModelMapper {
     }
 
 
-    public MyStockModelList convertToMyStockList(MyStockList myStockList) {
+    public MyStockModelList convertToMyStockModelList(MyStockList myStockList) {
         MyStockModelList myStockModelList = new MyStockModelList();
         ArrayList<MyStockModel> myStockModels = new ArrayList<>();
         MyStockModel myStockModel;

@@ -61,13 +61,13 @@ public class MainActivity extends AppCompatActivity implements MyStockListView {
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        String[] stockList = {"OHGI", "AAPL"};
+        mStockSymbolList = new ArrayList<>(Arrays.asList(stockList));
+
         mGetMyStockInteractor = new GetMyStockInteractor(mMyStockRepositoryImpl);
         mPresenter = new MyStockPresenter(mGetMyStockInteractor, mMyStockModelMapper);
         mPresenter.setMyStockListView(this);
         mPresenter.getMyStockList();
-
-        String[] stockList = {"ohgi", "aapl"};
-        mStockSymbolList = new ArrayList<>(Arrays.asList(stockList));
 
         loadMyStockList(mStockSymbolList);
 
@@ -86,7 +86,6 @@ public class MainActivity extends AppCompatActivity implements MyStockListView {
                 .subscribe(new Consumer<MyStockList>() {
                     @Override
                     public void accept(MyStockList myStocks) throws Exception {
-                        Log.i("aaaabbbb", "dddfdfdfd");
                         mAdapter.setItems(myStocks);
                     }
                 });
@@ -94,7 +93,6 @@ public class MainActivity extends AppCompatActivity implements MyStockListView {
 
     @Override
     public void renderMyStockListView(MyStockModelList myStockModelList) {
-
     }
 
     @Override

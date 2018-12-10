@@ -21,7 +21,6 @@ import butterknife.ButterKnife;
 
 public class MyStockAdapter extends RecyclerView.Adapter<MyStockAdapter.MyStockViewHolder> {
     private Context mContext;
-
     private ArrayList<MyStock> mMyStockList = new ArrayList<>();
 
     public MyStockAdapter(Context context) {
@@ -38,6 +37,8 @@ public class MyStockAdapter extends RecyclerView.Adapter<MyStockAdapter.MyStockV
 
     @Override
     public void onBindViewHolder(@NonNull MyStockViewHolder holder, int position) {
+        //Log.i("aaaaaaaSymbol", mMyStockList.get(position).getSymbol());
+
         holder.stockSymbolTV.setText(mMyStockList.get(position).getSymbol());
         holder.companyNameTV.setText(mMyStockList.get(position).getCompanyName());
         holder.latestPriceTV.setText(String.valueOf(mMyStockList.get(position).getLatestPrice()));
@@ -48,7 +49,6 @@ public class MyStockAdapter extends RecyclerView.Adapter<MyStockAdapter.MyStockV
     @Override
     public int getItemCount() {
         if (mMyStockList != null) {
-            Log.i("aaaaaaa", String.valueOf(mMyStockList.size()));
             return mMyStockList.size();
         } else {
             return 0;
@@ -74,9 +74,8 @@ public class MyStockAdapter extends RecyclerView.Adapter<MyStockAdapter.MyStockV
     }
 
     public void setItems(MyStockList myStockList) {
-        ArrayList<MyStock> myStocks = myStockList.getStocks();
         mMyStockList.clear();
-        if (myStocks != null) {
+        if (myStockList != null) {
             mMyStockList.addAll(myStockList.getStocks());
             notifyDataSetChanged();
         }

@@ -15,7 +15,6 @@ public class RetrofitClientInstance {
     private static final String BASE_URL = "https://api.iextrading.com/1.0/";
 
     public static Retrofit getRetrofitInstance() {
-        Log.i("aaaaaaa", "llllllll");
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(MyRetroStockList.class, new StockDeserializer())
                 .create();

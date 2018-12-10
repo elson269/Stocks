@@ -1,10 +1,14 @@
 package com.elsonji.stocks.presentation.presenters;
 
+import com.elsonji.stocks.data.mappers.MyRetroStockMapper;
+import com.elsonji.stocks.data.models.MyRetroStock;
 import com.elsonji.stocks.domain.interactors.GetMyStockInteractor;
 import com.elsonji.stocks.domain.models.MyStockList;
 import com.elsonji.stocks.presentation.mappers.MyStockModelMapper;
 import com.elsonji.stocks.presentation.models.MyStockModelList;
 import com.elsonji.stocks.presentation.views.MyStockListView;
+
+import java.util.ArrayList;
 
 import io.reactivex.observers.DisposableObserver;
 
@@ -12,10 +16,13 @@ public class MyStockPresenter implements Presenter {
     private GetMyStockInteractor getMyStockInteractor;
     private MyStockModelMapper mapper;
     private MyStockListView myStockListView;
+    //private ArrayList<String> myRetroStockList;
 
-    public MyStockPresenter(GetMyStockInteractor getMyStockInteractor, MyStockModelMapper mapper) {
+    public MyStockPresenter(GetMyStockInteractor getMyStockInteractor, MyStockModelMapper mapper
+    ) {
         this.getMyStockInteractor = getMyStockInteractor;
         this.mapper = mapper;
+        //this.myRetroStockList = myRetroStockList;
     }
 
     public void setMyStockListView(MyStockListView listView) {
@@ -26,7 +33,7 @@ public class MyStockPresenter implements Presenter {
         getMyStockInteractor.execute(new DisposableObserver<MyStockList>() {
             @Override
             public void onNext(MyStockList myStocklist) {
-                MyStockModelList myStockModelList = mapper.convertToMyStockList(myStocklist);
+                MyStockModelList myStockModelList = mapper.convertToMyStockModelList(myStocklist);
                 myStockListView.renderMyStockListView(myStockModelList);
             }
 
@@ -57,4 +64,5 @@ public class MyStockPresenter implements Presenter {
         getMyStockInteractor.dispose();
         myStockListView = null;
     }
+
 }
