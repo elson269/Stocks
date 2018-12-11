@@ -1,4 +1,4 @@
-package com.elsonji.stocks.data.networks;
+package com.elsonji.stocks.data.networks.mystocknetworks;
 
 public class ServiceGenerator {
     private static MyStockService myStockService;

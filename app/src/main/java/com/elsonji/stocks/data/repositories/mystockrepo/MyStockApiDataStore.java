@@ -1,9 +1,7 @@
-package com.elsonji.stocks.data.repositories;
-
-import android.util.Log;
+package com.elsonji.stocks.data.repositories.mystockrepo;
 
 import com.elsonji.stocks.data.models.MyRetroStockList;
-import com.elsonji.stocks.data.networks.ServiceGenerator;
+import com.elsonji.stocks.data.networks.mystocknetworks.ServiceGenerator;
 
 import java.util.ArrayList;
 
@@ -12,13 +10,11 @@ import io.reactivex.Observable;
 public class MyStockApiDataStore implements MyStockDataStore {
     @Override
     public Observable<MyRetroStockList> getMyRetroStocks(ArrayList<String> stockSymbolList) {
-        return ServiceGenerator.getDataService().getMyStocks(convertToString(stockSymbolList));
+        return ServiceGenerator.getDataService().getMyStocks(convertToString(stockSymbolList), "quote");
     }
 
     private String convertToString(ArrayList<String> stockSymbolList) {
         StringBuilder stringBuilder = new StringBuilder();
-        String url = "stock/market/batch?symbols=";
-        String url2 = "&types=quote";
         if (stockSymbolList != null) {
             for (int i = 0; i < stockSymbolList.size(); i++) {
                 stringBuilder.append(stockSymbolList.get(i));
@@ -26,7 +22,7 @@ public class MyStockApiDataStore implements MyStockDataStore {
                     stringBuilder.append(",");
                 }
             }
-            return url + stringBuilder.toString() + url2;
+            return stringBuilder.toString();
         } else {
             return null;
         }

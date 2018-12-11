@@ -3,8 +3,8 @@ package com.elsonji.stocks.presentation.di.modules;
 import android.content.Context;
 
 import com.elsonji.stocks.data.mappers.MyRetroStockMapper;
-import com.elsonji.stocks.data.repositories.MyStockApiDataStore;
-import com.elsonji.stocks.data.repositories.MyStockRepositoryImpl;
+import com.elsonji.stocks.data.repositories.mystockrepo.MyStockApiDataStore;
+import com.elsonji.stocks.data.repositories.mystockrepo.MyStockRepositoryImpl;
 import com.elsonji.stocks.domain.interactors.GetMyStockInteractor;
 import com.elsonji.stocks.domain.models.MyStock;
 import com.elsonji.stocks.presentation.di.scopes.PerActivity;

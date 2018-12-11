@@ -1,7 +1,4 @@
-package com.elsonji.stocks.data.networks;
-
-import android.nfc.Tag;
-import android.util.Log;
+package com.elsonji.stocks.data.networks.mystocknetworks;
 
 import com.elsonji.stocks.data.models.MyRetroStock;
 import com.elsonji.stocks.data.models.MyRetroStockList;

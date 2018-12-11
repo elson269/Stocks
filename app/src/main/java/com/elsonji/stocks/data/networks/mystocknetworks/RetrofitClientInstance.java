@@ -1,6 +1,4 @@
-package com.elsonji.stocks.data.networks;
-
-import android.util.Log;
+package com.elsonji.stocks.data.networks.mystocknetworks;
 
 import com.elsonji.stocks.data.models.MyRetroStockList;
 import com.google.gson.Gson;

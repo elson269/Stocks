@@ -1,9 +1,7 @@
-package com.elsonji.stocks.data.repositories;
+package com.elsonji.stocks.data.repositories.mystockrepo;
 
 import com.elsonji.stocks.data.mappers.MyRetroStockMapper;
-import com.elsonji.stocks.data.models.MyRetroStock;
 import com.elsonji.stocks.data.models.MyRetroStockList;
-import com.elsonji.stocks.domain.models.MyStock;
 import com.elsonji.stocks.domain.models.MyStockList;
 import com.elsonji.stocks.domain.repositories.MyStockRepository;
 

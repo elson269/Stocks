@@ -1,14 +1,10 @@
 package com.elsonji.stocks.presentation.presenters;
 
-import com.elsonji.stocks.data.mappers.MyRetroStockMapper;
-import com.elsonji.stocks.data.models.MyRetroStock;
 import com.elsonji.stocks.domain.interactors.GetMyStockInteractor;
 import com.elsonji.stocks.domain.models.MyStockList;
 import com.elsonji.stocks.presentation.mappers.MyStockModelMapper;
 import com.elsonji.stocks.presentation.models.MyStockModelList;
 import com.elsonji.stocks.presentation.views.MyStockListView;
-
-import java.util.ArrayList;
 
 import io.reactivex.observers.DisposableObserver;
 

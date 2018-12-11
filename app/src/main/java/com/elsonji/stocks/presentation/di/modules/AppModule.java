@@ -3,7 +3,7 @@ package com.elsonji.stocks.presentation.di.modules;
 import android.content.Context;
 
 import com.elsonji.stocks.data.mappers.MyRetroStockMapper;
-import com.elsonji.stocks.data.repositories.MyStockApiDataStore;
+import com.elsonji.stocks.data.repositories.mystockrepo.MyStockApiDataStore;
 import com.elsonji.stocks.presentation.mappers.MyStockModelMapper;
 
 import javax.inject.Singleton;
