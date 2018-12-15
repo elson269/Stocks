@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
-public interface SingleStockService {
+public interface StockDetailService {
     @GET("stock/{symbol}/batch")
     Observable<MyStock> getSingleStockBySymbol(@Path("symbol") String symbol, @Query("types") String types);
 }
