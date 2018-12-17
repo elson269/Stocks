@@ -1,6 +1,6 @@
 package com.elsonji.stocks.data.repositories.mystockrepo;
 
-import com.elsonji.stocks.data.models.MyRetroStockList;
+import com.elsonji.stocks.data.models.myretrostock.MyRetroStockList;
 import com.elsonji.stocks.data.networks.mystocknetworks.ServiceGenerator;
 
 import java.util.ArrayList;

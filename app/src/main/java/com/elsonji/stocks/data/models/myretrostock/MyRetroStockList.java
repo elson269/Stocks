@@ -1,4 +1,4 @@
-package com.elsonji.stocks.data.models;
+package com.elsonji.stocks.data.models.myretrostock;
 
 import java.util.ArrayList;
 

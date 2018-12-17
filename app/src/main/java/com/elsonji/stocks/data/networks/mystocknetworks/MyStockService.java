@@ -1,6 +1,6 @@
 package com.elsonji.stocks.data.networks.mystocknetworks;
 
-import com.elsonji.stocks.data.models.MyRetroStockList;
+import com.elsonji.stocks.data.models.myretrostock.MyRetroStockList;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;

@@ -1,7 +1,7 @@
 package com.elsonji.stocks.data.mappers;
 
-import com.elsonji.stocks.data.models.MyRetroStock;
-import com.elsonji.stocks.data.models.MyRetroStockList;
+import com.elsonji.stocks.data.models.myretrostock.MyRetroStock;
+import com.elsonji.stocks.data.models.myretrostock.MyRetroStockList;
 import com.elsonji.stocks.domain.models.MyStock;
 import com.elsonji.stocks.domain.models.MyStockList;
 

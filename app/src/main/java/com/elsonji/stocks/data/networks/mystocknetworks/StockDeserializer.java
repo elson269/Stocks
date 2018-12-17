@@ -1,7 +1,7 @@
 package com.elsonji.stocks.data.networks.mystocknetworks;
 
-import com.elsonji.stocks.data.models.MyRetroStock;
-import com.elsonji.stocks.data.models.MyRetroStockList;
+import com.elsonji.stocks.data.models.myretrostock.MyRetroStock;
+import com.elsonji.stocks.data.models.myretrostock.MyRetroStockList;
 import com.google.gson.Gson;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
