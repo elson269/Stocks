@@ -1,4 +1,4 @@
-package com.elsonji.stocks.domain.models;
+package com.elsonji.stocks.domain.models.mystock;
 
 import java.util.ArrayList;
 

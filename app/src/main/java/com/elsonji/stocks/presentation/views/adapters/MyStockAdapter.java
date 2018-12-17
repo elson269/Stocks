@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.elsonji.stocks.R;
-import com.elsonji.stocks.domain.models.MyStock;
-import com.elsonji.stocks.domain.models.MyStockList;
+import com.elsonji.stocks.domain.models.mystock.MyStock;
+import com.elsonji.stocks.domain.models.mystock.MyStockList;
 import com.elsonji.stocks.presentation.di.StockApplication;
 
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
 package com.elsonji.stocks.domain.interactors;
 
-import com.elsonji.stocks.domain.models.MyStock;
+import com.elsonji.stocks.domain.models.mystock.MyStock;
 
 import io.reactivex.Observable;
 

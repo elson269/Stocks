@@ -1,4 +1,4 @@
-package com.elsonji.stocks.data.networks.singlestocknetworks;
+package com.elsonji.stocks.data.networks.stockdetailnetworks;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 

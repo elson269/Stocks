@@ -1,128 +1,46 @@
-package com.elsonji.stocks.data.models.retrostockdetail;
-
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+package com.elsonji.stocks.domain.models.stockdetail;
 
 public class Quote {
-    @SerializedName("symbol")
-    @Expose
+
     private String symbol;
-    @SerializedName("companyName")
-    @Expose
     private String companyName;
-    @SerializedName("primaryExchange")
-    @Expose
     private String primaryExchange;
-    @SerializedName("sector")
-    @Expose
     private String sector;
-    @SerializedName("calculationPrice")
-    @Expose
     private String calculationPrice;
-    @SerializedName("open")
-    @Expose
     private Integer open;
-    @SerializedName("openTime")
-    @Expose
     private Integer openTime;
-    @SerializedName("close")
-    @Expose
     private Double close;
-    @SerializedName("closeTime")
-    @Expose
     private Integer closeTime;
-    @SerializedName("high")
-    @Expose
     private Double high;
-    @SerializedName("low")
-    @Expose
     private Double low;
-    @SerializedName("latestPrice")
-    @Expose
     private Double latestPrice;
-    @SerializedName("latestSource")
-    @Expose
     private String latestSource;
-    @SerializedName("latestTime")
-    @Expose
     private String latestTime;
-    @SerializedName("latestUpdate")
-    @Expose
     private Integer latestUpdate;
-    @SerializedName("latestVolume")
-    @Expose
     private Integer latestVolume;
-    @SerializedName("iexRealtimePrice")
-    @Expose
     private Object iexRealtimePrice;
-    @SerializedName("iexRealtimeSize")
-    @Expose
     private Object iexRealtimeSize;
-    @SerializedName("iexLastUpdated")
-    @Expose
     private Object iexLastUpdated;
-    @SerializedName("delayedPrice")
-    @Expose
     private Double delayedPrice;
-    @SerializedName("delayedPriceTime")
-    @Expose
     private Integer delayedPriceTime;
-    @SerializedName("extendedPrice")
-    @Expose
     private Double extendedPrice;
-    @SerializedName("extendedChange")
-    @Expose
     private Double extendedChange;
-    @SerializedName("extendedChangePercent")
-    @Expose
     private Double extendedChangePercent;
-    @SerializedName("extendedPriceTime")
-    @Expose
     private Integer extendedPriceTime;
-    @SerializedName("previousClose")
-    @Expose
     private Double previousClose;
-    @SerializedName("change")
-    @Expose
     private Double change;
-    @SerializedName("changePercent")
-    @Expose
     private Double changePercent;
-    @SerializedName("iexMarketPercent")
-    @Expose
     private Object iexMarketPercent;
-    @SerializedName("iexVolume")
-    @Expose
     private Object iexVolume;
-    @SerializedName("avgTotalVolume")
-    @Expose
     private Integer avgTotalVolume;
-    @SerializedName("iexBidPrice")
-    @Expose
     private Object iexBidPrice;
-    @SerializedName("iexBidSize")
-    @Expose
     private Object iexBidSize;
-    @SerializedName("iexAskPrice")
-    @Expose
     private Object iexAskPrice;
-    @SerializedName("iexAskSize")
-    @Expose
     private Object iexAskSize;
-    @SerializedName("marketCap")
-    @Expose
     private Integer marketCap;
-    @SerializedName("peRatio")
-    @Expose
     private Integer peRatio;
-    @SerializedName("week52High")
-    @Expose
     private Double week52High;
-    @SerializedName("week52Low")
-    @Expose
     private Double week52Low;
-    @SerializedName("ytdChange")
-    @Expose
     private Double ytdChange;
 
     public String getSymbol() {

@@ -1,7 +1,7 @@
 package com.elsonji.stocks.presentation.presenters;
 
 import com.elsonji.stocks.domain.interactors.GetMyStockInteractor;
-import com.elsonji.stocks.domain.models.MyStockList;
+import com.elsonji.stocks.domain.models.mystock.MyStockList;
 import com.elsonji.stocks.presentation.mappers.MyStockModelMapper;
 import com.elsonji.stocks.presentation.models.MyStockModelList;
 import com.elsonji.stocks.presentation.views.MyStockListView;

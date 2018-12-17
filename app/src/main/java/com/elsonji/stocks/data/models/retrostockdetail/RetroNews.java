@@ -3,7 +3,7 @@ package com.elsonji.stocks.data.models.retrostockdetail;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class News {
+public class RetroNews {
     @SerializedName("datetime")
     @Expose
     private String datetime;

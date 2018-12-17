@@ -2,8 +2,8 @@ package com.elsonji.stocks.data.mappers;
 
 import com.elsonji.stocks.data.models.myretrostock.MyRetroStock;
 import com.elsonji.stocks.data.models.myretrostock.MyRetroStockList;
-import com.elsonji.stocks.domain.models.MyStock;
-import com.elsonji.stocks.domain.models.MyStockList;
+import com.elsonji.stocks.domain.models.mystock.MyStock;
+import com.elsonji.stocks.domain.models.mystock.MyStockList;
 
 import java.util.ArrayList;
 

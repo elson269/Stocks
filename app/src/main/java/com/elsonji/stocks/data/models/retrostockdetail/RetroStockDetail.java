@@ -8,24 +8,24 @@ import java.util.List;
 public class RetroStockDetail {
     @SerializedName("quote")
     @Expose
-    private Quote quote;
+    private RetroQuote quote;
     @SerializedName("news")
     @Expose
-    private List<News> news = null;
+    private List<RetroNews> news = null;
 
-    public Quote getQuote() {
+    public RetroQuote getQuote() {
         return quote;
     }
 
-    public void setQuote(Quote quote) {
-        this.quote = quote;
+    public void setQuote(RetroQuote retroQuote) {
+        this.quote = retroQuote;
     }
 
-    public List<News> getNews() {
+    public List<RetroNews> getNews() {
         return news;
     }
 
-    public void setNews(List<News> news) {
-        this.news = news;
+    public void setNews(List<RetroNews> retroNews) {
+        this.news = retroNews;
     }
 }

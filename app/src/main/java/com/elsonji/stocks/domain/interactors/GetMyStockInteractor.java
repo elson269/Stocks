@@ -1,7 +1,7 @@
 package com.elsonji.stocks.domain.interactors;
 
-import com.elsonji.stocks.domain.models.MyStockList;
-import com.elsonji.stocks.domain.repositories.MyStockRepository;
+import com.elsonji.stocks.domain.models.mystock.MyStockList;
+import com.elsonji.stocks.domain.repositories.mystockrepo.MyStockRepository;
 
 import java.util.ArrayList;
 

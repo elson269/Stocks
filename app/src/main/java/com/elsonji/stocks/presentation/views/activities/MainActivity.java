@@ -11,7 +11,7 @@ import com.elsonji.stocks.data.mappers.MyRetroStockMapper;
 import com.elsonji.stocks.data.repositories.mystockrepo.MyStockApiDataStore;
 import com.elsonji.stocks.data.repositories.mystockrepo.MyStockRepositoryImpl;
 import com.elsonji.stocks.domain.interactors.GetMyStockInteractor;
-import com.elsonji.stocks.domain.models.MyStockList;
+import com.elsonji.stocks.domain.models.mystock.MyStockList;
 import com.elsonji.stocks.presentation.di.StockApplication;
 import com.elsonji.stocks.presentation.mappers.MyStockModelMapper;
 import com.elsonji.stocks.presentation.models.MyStockModelList;

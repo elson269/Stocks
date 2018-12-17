@@ -1,7 +1,7 @@
 package com.elsonji.stocks.domain.interactors;
 
-import com.elsonji.stocks.domain.models.MyStock;
-import com.elsonji.stocks.domain.repositories.StockDetailRepository;
+import com.elsonji.stocks.domain.models.mystock.MyStock;
+import com.elsonji.stocks.domain.repositories.stockdetailrepo.StockDetailRepository;
 
 import io.reactivex.Observable;
 
