@@ -1,7 +1,6 @@
-package com.elsonji.stocks.domain.models.stockdetail;
+package com.elsonji.stocks.presentation.models.stockdetailmodel;
 
-public class News {
-
+public class NewsModel {
     private String datetime;
     private String headline;
     private String source;
@@ -10,7 +9,7 @@ public class News {
     private String related;
     private String image;
 
-    public News(String datetime, String headline, String source, String url, String summary,
+    public NewsModel(String datetime, String headline, String source, String url, String summary,
                 String related, String image) {
         this.datetime = datetime;
         this.headline = headline;

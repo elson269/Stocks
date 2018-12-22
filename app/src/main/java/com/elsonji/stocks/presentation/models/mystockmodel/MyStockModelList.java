@@ -1,4 +1,4 @@
-package com.elsonji.stocks.presentation.models;
+package com.elsonji.stocks.presentation.models.mystockmodel;
 
 import java.util.ArrayList;
 

@@ -5,7 +5,7 @@ import java.util.List;
 public class StockDetail {
 
     private Quote quote;
-    private List<News> news = null;
+    private List<News> newsList = null;
 
     public Quote getQuote() {
         return quote;
@@ -16,10 +16,10 @@ public class StockDetail {
     }
 
     public List<News> getNews() {
-        return news;
+        return newsList;
     }
 
-    public void setNews(List<News> news) {
-        this.news = news;
+    public void setNews(List<News> newsList) {
+        this.newsList = newsList;
     }
 }

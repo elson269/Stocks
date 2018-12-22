@@ -1,7 +1,6 @@
-package com.elsonji.stocks.domain.models.stockdetail;
+package com.elsonji.stocks.presentation.models.stockdetailmodel;
 
-public class Quote {
-
+public class QuoteModel {
     private String symbol;
     private String companyName;
     private String primaryExchange;
@@ -43,7 +42,7 @@ public class Quote {
     private Double week52Low;
     private Double ytdChange;
 
-    public Quote(String symbol, String companyName, String primaryExchange, String sector,
+    public QuoteModel(String symbol, String companyName, String primaryExchange, String sector,
                  String calculationPrice, Integer open, Integer openTime, Double close,
                  Integer closeTime, Double high, Double low, Double latestPrice, String latestSource,
                  String latestTime, Integer latestUpdate, Integer latestVolume, Object iexRealtimePrice,

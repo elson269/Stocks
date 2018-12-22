@@ -1,6 +1,6 @@
 package com.elsonji.stocks.data.repositories.stockdetailrepo;
 
-import com.elsonji.stocks.data.mappers.RetroStockDetailMapper;
+import com.elsonji.stocks.data.mappers.stockdetailmapper.RetroStockDetailMapper;
 import com.elsonji.stocks.data.models.retrostockdetail.RetroStockDetail;
 import com.elsonji.stocks.domain.models.stockdetail.StockDetail;
 import com.elsonji.stocks.domain.repositories.stockdetailrepo.StockDetailRepository;

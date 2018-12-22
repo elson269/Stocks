@@ -1,10 +1,10 @@
-package com.elsonji.stocks.presentation.mappers;
+package com.elsonji.stocks.presentation.mappers.mystockmodelmapper;
 
 
 import com.elsonji.stocks.domain.models.mystock.MyStock;
 import com.elsonji.stocks.domain.models.mystock.MyStockList;
-import com.elsonji.stocks.presentation.models.MyStockModel;
-import com.elsonji.stocks.presentation.models.MyStockModelList;
+import com.elsonji.stocks.presentation.models.mystockmodel.MyStockModel;
+import com.elsonji.stocks.presentation.models.mystockmodel.MyStockModelList;
 
 import java.util.ArrayList;
 

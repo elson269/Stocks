@@ -2,13 +2,13 @@ package com.elsonji.stocks.presentation.di.modules;
 
 import android.content.Context;
 
-import com.elsonji.stocks.data.mappers.MyRetroStockMapper;
+import com.elsonji.stocks.data.mappers.myretrostockmapper.MyRetroStockMapper;
 import com.elsonji.stocks.data.repositories.mystockrepo.MyStockApiDataStore;
 import com.elsonji.stocks.data.repositories.mystockrepo.MyStockRepositoryImpl;
 import com.elsonji.stocks.domain.interactors.GetMyStockInteractor;
 import com.elsonji.stocks.domain.models.mystock.MyStock;
 import com.elsonji.stocks.presentation.di.scopes.PerActivity;
-import com.elsonji.stocks.presentation.mappers.MyStockModelMapper;
+import com.elsonji.stocks.presentation.mappers.mystockmodelmapper.MyStockModelMapper;
 import com.elsonji.stocks.presentation.presenters.MyStockPresenter;
 import com.elsonji.stocks.presentation.views.adapters.MyStockAdapter;
 

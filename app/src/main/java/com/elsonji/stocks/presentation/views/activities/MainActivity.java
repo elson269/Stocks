@@ -7,14 +7,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.elsonji.stocks.R;
-import com.elsonji.stocks.data.mappers.MyRetroStockMapper;
+import com.elsonji.stocks.data.mappers.myretrostockmapper.MyRetroStockMapper;
 import com.elsonji.stocks.data.repositories.mystockrepo.MyStockApiDataStore;
 import com.elsonji.stocks.data.repositories.mystockrepo.MyStockRepositoryImpl;
 import com.elsonji.stocks.domain.interactors.GetMyStockInteractor;
 import com.elsonji.stocks.domain.models.mystock.MyStockList;
 import com.elsonji.stocks.presentation.di.StockApplication;
-import com.elsonji.stocks.presentation.mappers.MyStockModelMapper;
-import com.elsonji.stocks.presentation.models.MyStockModelList;
+import com.elsonji.stocks.presentation.mappers.mystockmodelmapper.MyStockModelMapper;
+import com.elsonji.stocks.presentation.models.mystockmodel.MyStockModelList;
 import com.elsonji.stocks.presentation.presenters.MyStockPresenter;
 import com.elsonji.stocks.presentation.views.MyStockListView;
 import com.elsonji.stocks.presentation.views.adapters.MyStockAdapter;

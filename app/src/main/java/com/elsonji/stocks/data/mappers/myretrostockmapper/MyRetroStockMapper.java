@@ -1,4 +1,4 @@
-package com.elsonji.stocks.data.mappers;
+package com.elsonji.stocks.data.mappers.myretrostockmapper;
 
 import com.elsonji.stocks.data.models.myretrostock.MyRetroStock;
 import com.elsonji.stocks.data.models.myretrostock.MyRetroStockList;

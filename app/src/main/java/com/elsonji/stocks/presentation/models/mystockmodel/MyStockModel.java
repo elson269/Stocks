@@ -1,4 +1,4 @@
-package com.elsonji.stocks.presentation.models;
+package com.elsonji.stocks.presentation.models.mystockmodel;
 
 public class MyStockModel {
     private String symbol;
