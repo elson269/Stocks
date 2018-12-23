@@ -5,7 +5,7 @@ import com.elsonji.stocks.domain.models.stockdetail.News;
 
 public class RetroNewsMapper {
 
-    public News mapFrom(RetroNews retroNews) {
+    public static News mapFrom(RetroNews retroNews) {
         News news = null;
         if (retroNews != null) {
             news = new News(retroNews.getDatetime(),

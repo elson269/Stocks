@@ -4,7 +4,7 @@ import com.elsonji.stocks.data.models.retrostockdetail.RetroQuote;
 import com.elsonji.stocks.domain.models.stockdetail.Quote;
 
 public class RetroQuoteMapper {
-    public Quote mapFrom(RetroQuote retroQuote) {
+    public static Quote mapFrom(RetroQuote retroQuote) {
         Quote quote = null;
         if (retroQuote != null) {
             quote = new Quote(retroQuote.getSymbol(),

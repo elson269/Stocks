@@ -7,6 +7,11 @@ public class StockDetail {
     private Quote quote;
     private List<News> newsList = null;
 
+    public StockDetail(Quote quote, List<News> newsList) {
+        this.quote = quote;
+        this.newsList = newsList;
+    }
+
     public Quote getQuote() {
         return quote;
     }

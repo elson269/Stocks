@@ -3,8 +3,8 @@ package com.elsonji.stocks.presentation.mappers.stockdetailmodelmapper;
 import com.elsonji.stocks.domain.models.stockdetail.Quote;
 import com.elsonji.stocks.presentation.models.stockdetailmodel.QuoteModel;
 
-public class QuoteModelMapper {
-    public static QuoteModel mapFrom(Quote quote) {
+class QuoteModelMapper {
+    static QuoteModel mapFrom(Quote quote) {
         QuoteModel quoteModel = null;
         if (quote != null) {
             quoteModel = new QuoteModel(quote.getSymbol(),
