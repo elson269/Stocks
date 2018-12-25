@@ -13,8 +13,7 @@ public class MyStockPresenter implements Presenter {
     private MyStockModelMapper mapper;
     private MyStockListView myStockListView;
 
-    public MyStockPresenter(GetMyStockInteractor getMyStockInteractor, MyStockModelMapper mapper
-    ) {
+    public MyStockPresenter(GetMyStockInteractor getMyStockInteractor, MyStockModelMapper mapper) {
         this.getMyStockInteractor = getMyStockInteractor;
         this.mapper = mapper;
     }
