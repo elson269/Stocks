@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.views.activities.StockDetailActivity">
+
+    <TextView
+        android:id="@+id/symbolTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/stock_symbol" />
+
+    <TextView
+        android:id="@+id/latestPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/symbolTextView"
+        tools:text="@string/sample_price_value" />
+
+    <TextView
+        android:id="@+id/changeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="@+id/latestPriceTextView"
+        app:layout_constraintTop_toBottomOf="@+id/latestPriceTextView"
+        tools:text="@string/change_sample_value" />
+
+    <TextView
+        android:id="@+id/changePercentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/latestPriceTextView"
+        app:layout_constraintStart_toEndOf="@+id/changeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/latestPriceTextView"
+        tools:text="@string/change_sample_percent" />
+
+    <TextView
+        android:id="@+id/latestSourceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toEndOf="@+id/latestPriceTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/latest_source_sample_value" />
+
+    <TextView
+        android:id="@+id/latestUpdateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/latest_update_sample_value"
+        app:layout_constraintStart_toStartOf="@+id/latestSourceTextView"
+        app:layout_constraintTop_toBottomOf="@+id/latestSourceTextView" />
+
+    <TextView
+        android:id="@+id/latestTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/latestUpdateTextView"
+        app:layout_constraintTop_toBottomOf="@+id/latestUpdateTextView"
+        tools:text="@string/latest_time_sample_value" />
+
+    <TextView
+        android:id="@+id/primaryExchangeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/primary_exchange_sample_value"
+        app:layout_constraintStart_toStartOf="@+id/latestTimeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/latestTimeTextView" />
+
+    <TextView
+        android:id="@+id/keyStatisticsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/key_statistics"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeTextView" />
+
+    <include
+        layout="@layout/stock_detail_key_statistics_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyStatisticsTextView" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow>
+
+                <TextView
+                    style="@style/StockDetailKeyStatStyle"
+                    android:text="Prev Close" />
+
+                <TextView
+                    android:id="@+id/prevCloseTV"
+                    style="@style/StockDetailKeyStatStyle"
+                    android:gravity="end"
+                    tools:text="8.73" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dp"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/StockDetailKeyStatStyle"
+                    android:text="Open" />
+
+                <TextView
+                    android:id="@+id/openTV"
+                    style="@style/StockDetailKeyStatStyle"
+                    android:gravity="end"
+                    tools:text="8.73" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dp"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/StockDetailKeyStatStyle"
+                    android:text="Low" />
+
+                <TextView
+                    android:id="@+id/lowTV"
+                    style="@style/StockDetailKeyStatStyle"
+                    android:gravity="end"
+                    tools:text="8.73" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dp"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/StockDetailKeyStatStyle"
+                    android:text="High" />
+
+                <TextView
+                    android:id="@+id/highTV"
+                    style="@style/StockDetailKeyStatStyle"
+                    android:gravity="end"
+                    tools:text="8.73" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dp"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/StockDetailKeyStatStyle"
+                    android:text="52wk Low" />
+
+                <TextView
+                    android:id="@+id/wk52LowTV"
+                    style="@style/StockDetailKeyStatStyle"
+                    android:gravity="end"
+                    tools:text="8.73" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dp"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/StockDetailKeyStatStyle"
+                    android:text="52wk High" />
+
+                <TextView
+                    android:id="@+id/wk52HighTV"
+                    style="@style/StockDetailKeyStatStyle"
+                    android:gravity="end"
+                    tools:text="8.73" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dp"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/StockDetailKeyStatStyle"
+                    android:text="Market Cap" />
+
+                <TextView
+                    android:id="@+id/marketCapTV"
+                    style="@style/StockDetailKeyStatStyle"
+                    android:gravity="end"
+                    tools:text="8.73" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dp"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/StockDetailKeyStatStyle"
+                    android:text="Volume" />
+
+                <TextView
+                    android:id="@+id/volumeTV"
+                    style="@style/StockDetailKeyStatStyle"
+                    android:gravity="end"
+                    tools:text="8.73" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dp"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/StockDetailKeyStatStyle"
+                    android:text="Average Volume" />
+
+                <TextView
+                    android:id="@+id/averageVolumeTV"
+                    style="@style/StockDetailKeyStatStyle"
+                    android:gravity="end"
+                    tools:text="8.73" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dp"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/StockDetailKeyStatStyle"
+                    android:text="PE Ratio" />
+
+                <TextView
+                    android:id="@+id/peRatioTV"
+                    style="@style/StockDetailKeyStatStyle"
+                    android:gravity="end"
+                    tools:text="8.73" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dp"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/StockDetailKeyStatStyle"
+                    android:text="YTD Change" />
+
+                <TextView
+                    android:id="@+id/ytdChangeTV"
+                    style="@style/StockDetailKeyStatStyle"
+                    android:gravity="end"
+                    tools:text="8.73" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dp"
+                android:background="#FF909090" />
+
+        </TableLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

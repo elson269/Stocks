@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Stocks</string>
+    <string name="stock_symbol">Symbol</string>
+    <string name="sample_price_value">8.88</string>
+    <string name="company_name">Company Name</string>
+    <string name="change_sample_value">0.15</string>
+    <string name="change_sample_percent">0.20%</string>
+    <string name="latest_source_sample_value">Close:</string>
+    <string name="latest_update_sample_value">11:29:19</string>
+    <string name="latest_time_sample_value">September 19, 2017</string>
+    <string name="primary_exchange_sample_value">Nasdaq Global Select</string>
+    <string name="key_statistics">Key Statistics</string>
 </resources>
