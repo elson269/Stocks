@@ -10,4 +10,15 @@
     <string name="latest_time_sample_value">September 19, 2017</string>
     <string name="primary_exchange_sample_value">Nasdaq Global Select</string>
     <string name="key_statistics">Key Statistics</string>
+    <string name="prev_close_title">Prev Close</string>
+    <string name="open_title">Open</string>
+    <string name="low_title">Low</string>
+    <string name="high_title">High</string>
+    <string name="_52wk_low_title">52wk Low</string>
+    <string name="_52wk_high_title">52wk High</string>
+    <string name="market_cap_title">Market Cap</string>
+    <string name="volume_title">Volume</string>
+    <string name="average_volume_title">Average Volume</string>
+    <string name="pe_ratio_title">PE Ratio</string>
+    <string name="ytd_change_title">YTD Change</string>
 </resources>

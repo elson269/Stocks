@@ -23,7 +23,7 @@
 
                 <TextView
                     style="@style/StockDetailKeyStatStyle"
-                    android:text="Prev Close" />
+                    android:text="@string/prev_close_title" />
 
                 <TextView
                     android:id="@+id/prevCloseTV"
@@ -40,7 +40,7 @@
 
                 <TextView
                     style="@style/StockDetailKeyStatStyle"
-                    android:text="Open" />
+                    android:text="@string/open_title" />
 
                 <TextView
                     android:id="@+id/openTV"
@@ -57,7 +57,7 @@
 
                 <TextView
                     style="@style/StockDetailKeyStatStyle"
-                    android:text="Low" />
+                    android:text="@string/low_title" />
 
                 <TextView
                     android:id="@+id/lowTV"
@@ -74,7 +74,7 @@
 
                 <TextView
                     style="@style/StockDetailKeyStatStyle"
-                    android:text="High" />
+                    android:text="@string/high_title" />
 
                 <TextView
                     android:id="@+id/highTV"
@@ -91,7 +91,7 @@
 
                 <TextView
                     style="@style/StockDetailKeyStatStyle"
-                    android:text="52wk Low" />
+                    android:text="@string/_52wk_low_title" />
 
                 <TextView
                     android:id="@+id/wk52LowTV"
@@ -108,7 +108,7 @@
 
                 <TextView
                     style="@style/StockDetailKeyStatStyle"
-                    android:text="52wk High" />
+                    android:text="@string/_52wk_high_title" />
 
                 <TextView
                     android:id="@+id/wk52HighTV"
@@ -125,7 +125,7 @@
 
                 <TextView
                     style="@style/StockDetailKeyStatStyle"
-                    android:text="Market Cap" />
+                    android:text="@string/market_cap_title" />
 
                 <TextView
                     android:id="@+id/marketCapTV"
@@ -142,7 +142,7 @@
 
                 <TextView
                     style="@style/StockDetailKeyStatStyle"
-                    android:text="Volume" />
+                    android:text="@string/volume_title" />
 
                 <TextView
                     android:id="@+id/volumeTV"
@@ -159,7 +159,7 @@
 
                 <TextView
                     style="@style/StockDetailKeyStatStyle"
-                    android:text="Average Volume" />
+                    android:text="@string/average_volume_title" />
 
                 <TextView
                     android:id="@+id/averageVolumeTV"
@@ -176,7 +176,7 @@
 
                 <TextView
                     style="@style/StockDetailKeyStatStyle"
-                    android:text="PE Ratio" />
+                    android:text="@string/pe_ratio_title" />
 
                 <TextView
                     android:id="@+id/peRatioTV"
@@ -193,7 +193,7 @@
 
                 <TextView
                     style="@style/StockDetailKeyStatStyle"
-                    android:text="YTD Change" />
+                    android:text="@string/ytd_change_title" />
 
                 <TextView
                     android:id="@+id/ytdChangeTV"
