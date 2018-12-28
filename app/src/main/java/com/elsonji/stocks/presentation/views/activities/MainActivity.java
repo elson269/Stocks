@@ -33,7 +33,6 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity implements MyStockListView {
     @BindView(R.id.my_stock_list_recycler_view)
-
     RecyclerView mRecyclerView;
     @Inject
     MyStockAdapter mAdapter;
