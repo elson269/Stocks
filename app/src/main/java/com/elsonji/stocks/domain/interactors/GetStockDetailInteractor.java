@@ -13,7 +13,7 @@ public class GetStockDetailInteractor extends Interactor<StockDetail, String> {
     }
 
     @Override
-    Observable<StockDetail> buildInteractorObservable(String stockSymbol) {
+    public Observable<StockDetail> buildInteractorObservable(String stockSymbol) {
         return stockDetailRepository.getStockDetail(stockSymbol);
     }
 }
