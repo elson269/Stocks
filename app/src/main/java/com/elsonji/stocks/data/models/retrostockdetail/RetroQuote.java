@@ -21,16 +21,16 @@ public class RetroQuote {
     private String calculationPrice;
     @SerializedName("open")
     @Expose
-    private Integer open;
+    private Double open;
     @SerializedName("openTime")
     @Expose
-    private Integer openTime;
+    private Long openTime;
     @SerializedName("close")
     @Expose
     private Double close;
     @SerializedName("closeTime")
     @Expose
-    private Integer closeTime;
+    private Long closeTime;
     @SerializedName("high")
     @Expose
     private Double high;
@@ -48,7 +48,7 @@ public class RetroQuote {
     private String latestTime;
     @SerializedName("latestUpdate")
     @Expose
-    private Integer latestUpdate;
+    private Long latestUpdate;
     @SerializedName("latestVolume")
     @Expose
     private Integer latestVolume;
@@ -66,7 +66,7 @@ public class RetroQuote {
     private Double delayedPrice;
     @SerializedName("delayedPriceTime")
     @Expose
-    private Integer delayedPriceTime;
+    private Long delayedPriceTime;
     @SerializedName("extendedPrice")
     @Expose
     private Double extendedPrice;
@@ -78,7 +78,7 @@ public class RetroQuote {
     private Double extendedChangePercent;
     @SerializedName("extendedPriceTime")
     @Expose
-    private Integer extendedPriceTime;
+    private Long extendedPriceTime;
     @SerializedName("previousClose")
     @Expose
     private Double previousClose;
@@ -111,10 +111,10 @@ public class RetroQuote {
     private Object iexAskSize;
     @SerializedName("marketCap")
     @Expose
-    private Integer marketCap;
+    private Long marketCap;
     @SerializedName("peRatio")
     @Expose
-    private Integer peRatio;
+    private Double peRatio;
     @SerializedName("week52High")
     @Expose
     private Double week52High;
@@ -165,19 +165,19 @@ public class RetroQuote {
         this.calculationPrice = calculationPrice;
     }
 
-    public Integer getOpen() {
+    public Double getOpen() {
         return open;
     }
 
-    public void setOpen(Integer open) {
+    public void setOpen(Double open) {
         this.open = open;
     }
 
-    public Integer getOpenTime() {
+    public Long getOpenTime() {
         return openTime;
     }
 
-    public void setOpenTime(Integer openTime) {
+    public void setOpenTime(Long openTime) {
         this.openTime = openTime;
     }
 
@@ -189,11 +189,11 @@ public class RetroQuote {
         this.close = close;
     }
 
-    public Integer getCloseTime() {
+    public Long getCloseTime() {
         return closeTime;
     }
 
-    public void setCloseTime(Integer closeTime) {
+    public void setCloseTime(Long closeTime) {
         this.closeTime = closeTime;
     }
 
@@ -237,11 +237,11 @@ public class RetroQuote {
         this.latestTime = latestTime;
     }
 
-    public Integer getLatestUpdate() {
+    public Long getLatestUpdate() {
         return latestUpdate;
     }
 
-    public void setLatestUpdate(Integer latestUpdate) {
+    public void setLatestUpdate(Long latestUpdate) {
         this.latestUpdate = latestUpdate;
     }
 
@@ -285,11 +285,11 @@ public class RetroQuote {
         this.delayedPrice = delayedPrice;
     }
 
-    public Integer getDelayedPriceTime() {
+    public Long getDelayedPriceTime() {
         return delayedPriceTime;
     }
 
-    public void setDelayedPriceTime(Integer delayedPriceTime) {
+    public void setDelayedPriceTime(Long delayedPriceTime) {
         this.delayedPriceTime = delayedPriceTime;
     }
 
@@ -317,11 +317,11 @@ public class RetroQuote {
         this.extendedChangePercent = extendedChangePercent;
     }
 
-    public Integer getExtendedPriceTime() {
+    public Long getExtendedPriceTime() {
         return extendedPriceTime;
     }
 
-    public void setExtendedPriceTime(Integer extendedPriceTime) {
+    public void setExtendedPriceTime(Long extendedPriceTime) {
         this.extendedPriceTime = extendedPriceTime;
     }
 
@@ -405,19 +405,19 @@ public class RetroQuote {
         this.iexAskSize = iexAskSize;
     }
 
-    public Integer getMarketCap() {
+    public Long getMarketCap() {
         return marketCap;
     }
 
-    public void setMarketCap(Integer marketCap) {
+    public void setMarketCap(Long marketCap) {
         this.marketCap = marketCap;
     }
 
-    public Integer getPeRatio() {
+    public Double getPeRatio() {
         return peRatio;
     }
 
-    public void setPeRatio(Integer peRatio) {
+    public void setPeRatio(Double peRatio) {
         this.peRatio = peRatio;
     }
 

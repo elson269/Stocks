@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity implements MyStockListView {
         String[] stockList = {"OHGI", "AAPL"};
         mStockSymbolList = new ArrayList<>(Arrays.asList(stockList));
 
-        mPresenter.setMyStockListView(this);
-        mPresenter.getMyStockList();
+        //mPresenter.setMyStockListView(this);
+        //mPresenter.getMyStockList();
 
         loadMyStockList(mStockSymbolList);
     }
@@ -89,6 +89,8 @@ public class MainActivity extends AppCompatActivity implements MyStockListView {
 
     @Override
     public void renderMyStockListView(MyStockModelList myStockModelList) {
+        mPresenter.setMyStockListView(this);
+        mPresenter.getMyStockList();
     }
 
     @Override

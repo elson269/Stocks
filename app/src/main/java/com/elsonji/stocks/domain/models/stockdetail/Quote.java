@@ -7,26 +7,26 @@ public class Quote {
     private String primaryExchange;
     private String sector;
     private String calculationPrice;
-    private Integer open;
-    private Integer openTime;
+    private Double open;
+    private Long openTime;
     private Double close;
-    private Integer closeTime;
+    private Long closeTime;
     private Double high;
     private Double low;
     private Double latestPrice;
     private String latestSource;
     private String latestTime;
-    private Integer latestUpdate;
+    private Long latestUpdate;
     private Integer latestVolume;
     private Object iexRealtimePrice;
     private Object iexRealtimeSize;
     private Object iexLastUpdated;
     private Double delayedPrice;
-    private Integer delayedPriceTime;
+    private Long delayedPriceTime;
     private Double extendedPrice;
     private Double extendedChange;
     private Double extendedChangePercent;
-    private Integer extendedPriceTime;
+    private Long extendedPriceTime;
     private Double previousClose;
     private Double change;
     private Double changePercent;
@@ -37,22 +37,22 @@ public class Quote {
     private Object iexBidSize;
     private Object iexAskPrice;
     private Object iexAskSize;
-    private Integer marketCap;
-    private Integer peRatio;
+    private Long marketCap;
+    private Double peRatio;
     private Double week52High;
     private Double week52Low;
     private Double ytdChange;
 
     public Quote(String symbol, String companyName, String primaryExchange, String sector,
-                 String calculationPrice, Integer open, Integer openTime, Double close,
-                 Integer closeTime, Double high, Double low, Double latestPrice, String latestSource,
-                 String latestTime, Integer latestUpdate, Integer latestVolume, Object iexRealtimePrice,
-                 Object iexRealtimeSize, Object iexLastUpdated, Double delayedPrice, Integer delayedPriceTime,
+                 String calculationPrice, Double open, Long openTime, Double close,
+                 Long closeTime, Double high, Double low, Double latestPrice, String latestSource,
+                 String latestTime, Long latestUpdate, Integer latestVolume, Object iexRealtimePrice,
+                 Object iexRealtimeSize, Object iexLastUpdated, Double delayedPrice, Long delayedPriceTime,
                  Double extendedPrice, Double extendedChange, Double extendedChangePercent,
-                 Integer extendedPriceTime, Double previousClose, Double change, Double changePercent,
+                 Long extendedPriceTime, Double previousClose, Double change, Double changePercent,
                  Object iexMarketPercent, Object iexVolume, Integer avgTotalVolume, Object iexBidPrice,
-                 Object iexBidSize, Object iexAskPrice, Object iexAskSize, Integer marketCap,
-                 Integer peRatio, Double week52High, Double week52Low, Double ytdChange) {
+                 Object iexBidSize, Object iexAskPrice, Object iexAskSize, Long marketCap,
+                 Double peRatio, Double week52High, Double week52Low, Double ytdChange) {
         this.symbol = symbol;
         this.companyName = companyName;
         this.primaryExchange = primaryExchange;
@@ -135,19 +135,19 @@ public class Quote {
         this.calculationPrice = calculationPrice;
     }
 
-    public Integer getOpen() {
+    public Double getOpen() {
         return open;
     }
 
-    public void setOpen(Integer open) {
+    public void setOpen(Double open) {
         this.open = open;
     }
 
-    public Integer getOpenTime() {
+    public Long getOpenTime() {
         return openTime;
     }
 
-    public void setOpenTime(Integer openTime) {
+    public void setOpenTime(Long openTime) {
         this.openTime = openTime;
     }
 
@@ -159,11 +159,11 @@ public class Quote {
         this.close = close;
     }
 
-    public Integer getCloseTime() {
+    public Long getCloseTime() {
         return closeTime;
     }
 
-    public void setCloseTime(Integer closeTime) {
+    public void setCloseTime(Long closeTime) {
         this.closeTime = closeTime;
     }
 
@@ -207,11 +207,11 @@ public class Quote {
         this.latestTime = latestTime;
     }
 
-    public Integer getLatestUpdate() {
+    public Long getLatestUpdate() {
         return latestUpdate;
     }
 
-    public void setLatestUpdate(Integer latestUpdate) {
+    public void setLatestUpdate(Long latestUpdate) {
         this.latestUpdate = latestUpdate;
     }
 
@@ -255,11 +255,11 @@ public class Quote {
         this.delayedPrice = delayedPrice;
     }
 
-    public Integer getDelayedPriceTime() {
+    public Long getDelayedPriceTime() {
         return delayedPriceTime;
     }
 
-    public void setDelayedPriceTime(Integer delayedPriceTime) {
+    public void setDelayedPriceTime(Long delayedPriceTime) {
         this.delayedPriceTime = delayedPriceTime;
     }
 
@@ -287,11 +287,11 @@ public class Quote {
         this.extendedChangePercent = extendedChangePercent;
     }
 
-    public Integer getExtendedPriceTime() {
+    public Long getExtendedPriceTime() {
         return extendedPriceTime;
     }
 
-    public void setExtendedPriceTime(Integer extendedPriceTime) {
+    public void setExtendedPriceTime(Long extendedPriceTime) {
         this.extendedPriceTime = extendedPriceTime;
     }
 
@@ -375,19 +375,19 @@ public class Quote {
         this.iexAskSize = iexAskSize;
     }
 
-    public Integer getMarketCap() {
+    public Long getMarketCap() {
         return marketCap;
     }
 
-    public void setMarketCap(Integer marketCap) {
+    public void setMarketCap(Long marketCap) {
         this.marketCap = marketCap;
     }
 
-    public Integer getPeRatio() {
+    public Double getPeRatio() {
         return peRatio;
     }
 
-    public void setPeRatio(Integer peRatio) {
+    public void setPeRatio(Double peRatio) {
         this.peRatio = peRatio;
     }
 
