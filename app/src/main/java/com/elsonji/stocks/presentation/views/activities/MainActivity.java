@@ -113,5 +113,9 @@ public class MainActivity extends AppCompatActivity implements MyStockListView {
         return this;
     }
 
-
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        mPresenter.destroy();
+//    }
 }

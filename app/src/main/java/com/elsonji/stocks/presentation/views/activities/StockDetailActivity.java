@@ -150,4 +150,10 @@ public class StockDetailActivity extends AppCompatActivity implements StockDetai
     public Context getContext() {
         return this;
     }
+
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        presenter.destroy();
+//    }
 }
